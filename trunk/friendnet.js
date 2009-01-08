@@ -1,3 +1,11 @@
+function getFlexApp(appName) {
+ if (navigator.appName.indexOf ("Microsoft") !=-1) {
+   return window[appName];
+ } else {
+   return document[appName];
+ }
+}
+
 function loadFriends() {
   var req = opensocial.newDataRequest();
 
@@ -11,6 +19,8 @@ function loadFriends() {
 }
 
 function onLoadFriends(data) {
+
+  getFlexApp('EISample').add_friends(data);
 
   output(data.get("viewer").getData().getDisplayName());
 
