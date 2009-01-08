@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="friendnet">
+    <Require feature="opensocial-0.8"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="http://opensocial-resources.googlecode.com/svn/samples/tutorial/tags/api-0.7/gifts_2_send_gifts.js"></script>
+      <script>
+        gadgets.util.registerOnLoadHandler(init);
+      </script>
+      <div id='main'>
+        <span id='friends'></span>
+      </div>
+    ]]>
+  </Content>
+</Module>
