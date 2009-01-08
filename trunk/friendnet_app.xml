@@ -10,6 +10,7 @@
         gadgets.util.registerOnLoadHandler(init);
       </script>
       <div id='main'>
+      <div id='app'>
     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 			id="EISample" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
@@ -27,7 +28,7 @@
 				pluginspage="http://www.adobe.com/go/getflashplayer">
 			</embed>
 	</object>
-
+    </div>
 
 	Welcome <b id="me"></b>!
         You have a total of <b id="fcount"></b> friends.
