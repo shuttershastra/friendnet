@@ -10,6 +10,8 @@
         gadgets.util.registerOnLoadHandler(init);
       </script>
       <div id='main'>
+	Welcome <div id="me"></div>!
+        You have a total of <div id="fcount"></div> friends.
         Your friends:
         <div id='friends'></div>
       </div>

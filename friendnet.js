@@ -1,18 +1,18 @@
 function loadFriends() {
   var req = opensocial.newDataRequest();
+
   req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.OWNER), 'viewer');
 
-
-  var viewerFriends = opensocial.newIdSpec({ "userId" : "OWNER", "groupId" : "FRIENDS" });
   var opt_params = {};
-  opt_params[opensocial.DataRequest.FilterType ] = opensocial.DataRequest.FilterType.ALL;
+  opt_params[opensocial.DataRequest.PeopleRequestFields.MAX] = 100; 
 
-  req.add(req.newFetchPeopleRequest(viewerFriends, opt_params), 'viewerFriends');
+  req.add(req.newFetchPeopleRequest('OWNER_FRIENDS', opt_params), 'viewerFriends');
   req.send(onLoadFriends);
 }
 
 function onLoadFriends(data) {
   var viewer = data.get('viewer').getData();
+  var count=indata.getTotalSize(); 
   var viewerFriends = data.get('viewerFriends').getData();
   
   html = new Array();
@@ -22,6 +22,8 @@ function onLoadFriends(data) {
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
+  document.getElementById('fcount').innerHTML = count;
+  document.getElementById('me').innerHTML = viewer;
 }
 
 function init() {
