@@ -1,6 +1,6 @@
-function getFlexApp(appName) {
-   return document.getElementById(appName);
-}
+function getSWF(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName]; } else { if(document[movieName].length != undefined){ return document[movieName][1]; } return document[movieName]; }
+
+} 
 
 function loadFriends() {
   var req = opensocial.newDataRequest();
@@ -15,8 +15,6 @@ function loadFriends() {
 }
 
 function onLoadFriends(data) {
-
-  getFlexApp('EISample').add_friends(data);
 
   output(data.get("viewer").getData().getDisplayName());
 
@@ -36,6 +34,8 @@ function onLoadFriends(data) {
 }
 
 function init() {
-  getFlexApp('EISample').add_friends('loading ...');
+  var app = getSWF('EISample');
+  if (!app) alert('app missing');
+  else app.add_friends('loading ...');
   loadFriends();
 }
