@@ -10,11 +10,11 @@ function onLoadFriends(data) {
   var viewerFriends = data.get('viewerFriends').getData();
   
   html = new Array();
-  html.push('<select id="person">');
+  html.push('<ul>');
   viewerFriends.each(function(person) {
-    html.push('<option value="' + person.getId() + '">' + person.getDisplayName() + "</option>");
+    html.push('<li>' + person.getDisplayName() + "</li>");
   });
-  html.push('</select>');
+  html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
 }
 

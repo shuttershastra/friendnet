@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
   <ModulePrefs title="friendnet">
-    <Require feature="opensocial-0.8"/>
+    <Require feature="opensocial-0.7"/>
   </ModulePrefs>
   <Content type="html">
     <![CDATA[
-      <script src="http://code.google.com/p/friendnet/source/browse/trunk/friendnet.js"></script>
+      <script src="http://friendnet.googlecode.com/svn/trunk/friendnet.js"></script>
       <script>
         gadgets.util.registerOnLoadHandler(init);
       </script>
       <div id='main'>
-        <span id='friends'></span>
+        Your friends:
+        <div id='friends'></div>
       </div>
     ]]>
   </Content>
 </Module>
+
