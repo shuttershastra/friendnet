@@ -1,9 +1,5 @@
 function getFlexApp(appName) {
- if (navigator.appName.indexOf ("Microsoft") !=-1) {
-   return window[appName];
- } else {
-   return document[appName];
- }
+   return document.getElementById(appName);
 }
 
 function loadFriends() {
