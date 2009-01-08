@@ -36,5 +36,6 @@ function onLoadFriends(data) {
 }
 
 function init() {
+  getFlexApp('EISample').add_friends('loading ...');
   loadFriends();
 }
