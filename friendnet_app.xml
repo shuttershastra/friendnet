@@ -29,9 +29,11 @@
 			</embed>
 	</object>
     </div>
+   <form id='gift_form'>
+            Add friends to above display list: <a href='javascript:void(0);' onclick='loadFriends();'>Go!</a>
+    </form>
 
-	Welcome <b id="me"></b>!
-        You have a total of <b id="fcount"></b> friends.
+
         Your friends:
         <div id='friends'></div>
       </div>
