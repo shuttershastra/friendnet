@@ -23,7 +23,7 @@ function onLoadFriends(data) {
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
   document.getElementById('fcount').innerHTML = count;
-  document.getElementById('me').innerHTML = viewer;
+  document.getElementById('me').innerHTML = viewer.getDisplayName();
 }
 
 function init() {
