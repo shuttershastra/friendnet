@@ -11,6 +11,9 @@ function loadFriends() {
 }
 
 function onLoadFriends(data) {
+
+  output(data.get("viewer").getData().getDisplayName());
+
   var viewer = data.get('viewer').getData();
   var count=indata.getTotalSize(); 
   var viewerFriends = data.get('viewerFriends').getData();
