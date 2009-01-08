@@ -14,11 +14,11 @@
     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 			id="EISample" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
-			<param name="movie" value="EISample.swf" />
+			<param name="movie" value="http://friendnet.googlecode.com/svn/trunk/EISample.swf" />
 			<param name="quality" value="high" />
 			<param name="bgcolor" value="#869ca7" />
 			<param name="allowScriptAccess" value="sameDomain" />
-			<embed src="EISample.swf" quality="high" bgcolor="#869ca7"
+			<embed src="http://friendnet.googlecode.com/svn/trunk/EISample.swf" quality="high" bgcolor="#869ca7"
 				width="482" height="348" name="EISample" align="middle"
 				play="true"
 				loop="false"
