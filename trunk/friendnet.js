@@ -3,8 +3,7 @@ function loadFriends() {
   req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.VIEWER), 'viewer');
   var viewerFriends = opensocial.newIdSpec({ "userId" : "VIEWER", "groupId" : "FRIENDS" });
   var opt_params = {};
-  opt_params[opensocial.DataRequest.PeopleRequestFields.FILTER ] =
-      opensocial.DataRequest.FilterType.ALL;
+  opt_params[opensocial.DataRequest.PeopleRequestFields.MAX] = 50;
 
   req.add(req.newFetchPeopleRequest(viewerFriends, opt_params), 'viewerFriends');
   req.send(onLoadFriends);
