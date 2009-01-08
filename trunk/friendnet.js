@@ -30,8 +30,9 @@ function onLoadFriends(data) {
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
-  document.getElementById('fcount').innerHTML = count;
-  document.getElementById('me').innerHTML = viewer.getDisplayName();
+  //document.getElementById('fcount').innerHTML = '' + count;
+  //document.getElementById('me').innerHTML = viewer.getDisplayName();
+  gadgets.window.adjustHeight();
 }
 
 function init() {
