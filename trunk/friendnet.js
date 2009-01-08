@@ -25,7 +25,8 @@ function onLoadFriends(data) {
   html = new Array();
   html.push('<ul>');
   viewerFriends.each(function(person) {
-    html.push('<li>' + person.getDisplayName() + "</li>");
+    //html.push('<li>' + person.getDisplayName() + "</li>");
+    getSWF('FlexJSTutorial').addPerson(person.getDisplayName() , '42', 'male');
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');

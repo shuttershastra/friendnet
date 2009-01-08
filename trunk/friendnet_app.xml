@@ -12,7 +12,7 @@
       <div id='main'>
       <div id='app'>
     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-			id="EISample" width="482" height="348"
+			id="FlexJSTutorial" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
 			<param name="movie" value="http://blog.paranoidferret.com/files/JSTutorial.swf" />
 			<param name="quality" value="high" />
