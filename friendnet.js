@@ -36,6 +36,6 @@ function onLoadFriends(data) {
 function init() {
   var app = getSWF('EISample');
   if (!app) alert('app missing');
-  else app.add_friends('loading ...');
+  else app.addPerson('loading ...', '23', 'bb');
   loadFriends();
 }
