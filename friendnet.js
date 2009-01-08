@@ -36,8 +36,8 @@ function onLoadFriends(data) {
 }
 
 function init() {
-  var app = getSWF('EISample');
-  if (!app) alert('app missing');
+  var app = getSWF('FlexJSTutorial');
+  if (!app) output('app missing');
   else app.addPerson('loading ...', '23', 'bb');
   loadFriends();
 }
