@@ -1,11 +1,13 @@
 function getSWF(movieName) { 
-  if (navigator.appName.indexOf("Microsoft") != -1) { 
-    return window[movieName]; 
-  } else { 
-    if(document[movieName].length != undefined) { 
-      return document[movieName][1]; } 
-    return document[movieName]; 
-  }
+  //~ if (navigator.appName.indexOf("Microsoft") != -1) { 
+    //~ return window[movieName]; 
+  //~ } else { 
+    //~ if(document[movieName].length != undefined) { 
+      //~ return document[movieName][1]; } 
+    //~ return document[movieName]; 
+  //~ }
+  var isIE = navigator.appName.indexOf("Microsoft") != -1; 
+  return (isIE) ? window[movieName] : document[movieName]
 } 
 
 function loadFriends() {
@@ -34,7 +36,6 @@ function onLoadFriends(data) {
     html.push('<li>' + person.getDisplayName() + "</li>");    
   });
   html.push('</ul>');
-  getSWF('EISample').add_friends(html.join(''));
   document.getElementById('friends').innerHTML = html.join('');
   //document.getElementById('fcount').innerHTML = '' + count;
   //document.getElementById('me').innerHTML = viewer.getDisplayName();
@@ -42,6 +43,12 @@ function onLoadFriends(data) {
 }
 
 function init() {
+  
+}
+
+function swf_ready() {
+  alert('SWF ready');
+  output('SWF ready');
   var app = getSWF('EISample');
   if (!app) output('app missing');
   else {
