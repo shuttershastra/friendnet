@@ -26,6 +26,7 @@ function onLoadFriends(data) {
   html.push('<ul>');
   viewerFriends.each(function(person) {
     html.push('<li>' + person.getDisplayName() + "</li>");
+    app.add_friends(person.getDisplayName());
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
@@ -37,6 +38,8 @@ function onLoadFriends(data) {
 function init() {
   var app = getSWF('EISample');
   if (!app) output('app missing');
-  else app.addPerson('loading ...', '23', 'bb');
-  loadFriends();
+  else {
+    app.add_friends('loading ...');
+    loadFriends();
+  }
 }
