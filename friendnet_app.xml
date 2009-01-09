@@ -50,6 +50,7 @@
 		  html.push('<ul>');
 		  viewerFriends.each(function(person) {
 		    html.push('<li>' + person.getDisplayName() + "</li>");
+		    getSWF('EISample').add_friends(person.getDisplayName());
 		  });
 		  html.push('</ul>');
 		  document.getElementById('friends').innerHTML = html.join('');
