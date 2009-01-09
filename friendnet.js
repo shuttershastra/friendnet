@@ -16,7 +16,7 @@ function loadFriends() {
 
 function onLoadFriends(data) {
 
-  output(data.get("viewer").getData().getDisplayName());
+  //output(data.get("viewer").getData().getDisplayName());
 
   var viewer = data.get('viewer').getData();
   var count=indata.getTotalSize(); 
@@ -26,7 +26,7 @@ function onLoadFriends(data) {
   html.push('<ul>');
   viewerFriends.each(function(person) {
     html.push('<li>' + person.getDisplayName() + "</li>");
-    app.add_friends(person.getDisplayName());
+    getSWF('EISample').add_friends(person.getDisplayName());
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
