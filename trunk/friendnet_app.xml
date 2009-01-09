@@ -35,27 +35,27 @@
 		
 		function loadFriends() {
 		  alert('loadFriends');
-		  var req = opensocial.newDataRequest();		
-		  req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.VIEWER), 'viewer');
-		  req.add(req.newFetchPeopleRequest(opensocial.DataRequest.Group.VIEWER_FRIENDS), 'viewerFriends');
+		  var req = opensocial.newDataRequest();
+		  req.add(req.newFetchPersonRequest('VIEWER'), 'viewer');
+		  req.add(req.newFetchPeopleRequest('VIEWER_FRIENDS'), 'viewerFriends');
 		  req.send(onLoadFriends);
 		}
 		
 		function onLoadFriends(data) {
-		    alert('onLoadFriends');
-		    var viewer = dataResponse.get('viewer').getData();
-		    var html = 'Friends of ' + viewer.getDisplayName(); 
-		    html += ':<br><ul>';
-		    var viewerFriends = dataResponse.get('viewerFriends').getData();
-		    viewerFriends.each(function(person) {
-		      html += '<li>' + person.getDisplayName() + '</li>';
-		    });
-		    html += '</ul>';
-
-		    document.getElementById('friends').innerHTML = html.join('');		  
+		  alert('onLoadFriends');
+		  var viewer = data.get('viewer').getData();
+		  var viewerFriends = data.get('viewerFriends').getData();
+		  
+		  html = new Array();
+		  html.push('<ul>');
+		  viewerFriends.each(function(person) {
+		    html.push('<li>' + person.getDisplayName() + "</li>");
+		  });
+		  html.push('</ul>');
+		  document.getElementById('friends').innerHTML = html.join('');
 		}
+
 	  </script>
-      <div id='main'>
       		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 			id="EISample" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
@@ -73,14 +73,11 @@
 				pluginspage="http://www.adobe.com/go/getflashplayer">
 			</embed>
 		</object>
-  	  <div>
-  	  	<form id='gift_form'>
-            Add friends to above display list: <a href='javascript:void(0);' onclick='test();'>Go!</a>
-      	</form>
-      	Your friends:
-      	<div id='friends'></div>
-      </div>
-      </div>
+		<div id='main'>
+        	Your friends:
+        	<div id='friends'></div>
+      	</div>
+		  	  
     ]]>
   </Content>
 </Module>
