@@ -11,6 +11,7 @@ function getSWF(movieName) {
 } 
 
 function loadFriends() {
+  alert('onLoadFriends'):
   var req = opensocial.newDataRequest();
 
   req.add(req.newFetchPersonRequest('OWNER'), 'viewer');
@@ -25,7 +26,7 @@ function loadFriends() {
 function onLoadFriends(data) {
 
   //output(data.get("viewer").getData().getDisplayName());
-
+  alert('onLoadFriends'):
   var viewer = data.get('viewer').getData();
   var count=indata.getTotalSize(); 
   var viewerFriends = data.get('viewerFriends').getData();
@@ -43,5 +44,5 @@ function onLoadFriends(data) {
 }
 
 function init() {
-   loadFriends();
+  // loadFriends();
 }
