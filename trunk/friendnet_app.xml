@@ -44,14 +44,14 @@
 		function onLoadFriends(data) {
 		  alert('onLoadFriends');
 		  var viewer = data.get('viewer').getData();
-		  getSWF('EISample').add_friends(viewer.getDisplayName());
+		  getSWF('EISample').add_friends('\n'+viewer.getDisplayName());
 		  var viewerFriends = data.get('viewerFriends').getData();
 		  
 		  html = new Array();
 		  html.push('<ul>');
 		  viewerFriends.each(function(person) {
 		    html.push('<li>' + person.getDisplayName() + "</li>");
-		    getSWF('EISample').add_friends(person.getDisplayName());
+		    getSWF('EISample').add_friends(person.getDisplayName()+'\n');
 		  });
 		  html.push('</ul>');
 		  document.getElementById('friends').innerHTML = html.join('');
