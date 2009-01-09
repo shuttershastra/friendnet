@@ -46,6 +46,6 @@ function init() {
   if (!app) output('app missing');
   else {
     app.add_friends('loading ...');
-    loadFriends();
   }
+  loadFriends();
 }
