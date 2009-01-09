@@ -14,11 +14,11 @@
     <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 			id="EISample" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
-			<param name="movie" value="http://megaswf.com/upload_files/77b42d3049428c2f5a2f81d8e07a3232.swf" />
+			<param name="movie" value="http://megaswf.com/upload_files/23d1ca804bcedf4d278368895dad4011.swf" />
 			<param name="quality" value="high" />
 			<param name="bgcolor" value="#869ca7" />
 			<param name="allowScriptAccess" value="always" />
-			<embed src="http://megaswf.com/upload_files/77b42d3049428c2f5a2f81d8e07a3232.swf" quality="high" bgcolor="#869ca7"
+			<embed src="http://megaswf.com/upload_files/23d1ca804bcedf4d278368895dad4011.swf" quality="high" bgcolor="#869ca7"
 				width="482" height="348" name="EISample" align="middle"
 				play="true"
 				loop="false"

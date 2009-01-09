@@ -1,5 +1,11 @@
-function getSWF(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) { return window[movieName]; } else { if(document[movieName].length != undefined){ return document[movieName][1]; } return document[movieName]; }
-
+function getSWF(movieName) { 
+  if (navigator.appName.indexOf("Microsoft") != -1) { 
+    return window[movieName]; 
+  } else { 
+    if(document[movieName].length != undefined) { 
+      return document[movieName][1]; } 
+    return document[movieName]; 
+  }
 } 
 
 function loadFriends() {
