@@ -5,7 +5,7 @@ function getSWF(movieName) { if (navigator.appName.indexOf("Microsoft") != -1) {
 function loadFriends() {
   var req = opensocial.newDataRequest();
 
-  req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.OWNER), 'viewer');
+  req.add(req.newFetchPersonRequest('OWNER'), 'viewer');
 
   var opt_params = {};
   opt_params[opensocial.DataRequest.PeopleRequestFields.MAX] = 100; 
@@ -25,10 +25,10 @@ function onLoadFriends(data) {
   html = new Array();
   html.push('<ul>');
   viewerFriends.each(function(person) {
-    html.push('<li>' + person.getDisplayName() + "</li>");
-    getSWF('EISample').add_friends(person.getDisplayName());
+    html.push('<li>' + person.getDisplayName() + "</li>");    
   });
   html.push('</ul>');
+  getSWF('EISample').add_friends(html.join(''));
   document.getElementById('friends').innerHTML = html.join('');
   //document.getElementById('fcount').innerHTML = '' + count;
   //document.getElementById('me').innerHTML = viewer.getDisplayName();
