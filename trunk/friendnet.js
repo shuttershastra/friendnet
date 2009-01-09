@@ -25,18 +25,17 @@ function onLoadFriends(data) {
   html = new Array();
   html.push('<ul>');
   viewerFriends.each(function(person) {
-    //html.push('<li>' + person.getDisplayName() + "</li>");
-    getSWF('FlexJSTutorial').addPerson(person.getDisplayName() , '42', 'male');
+    html.push('<li>' + person.getDisplayName() + "</li>");
   });
   html.push('</ul>');
   document.getElementById('friends').innerHTML = html.join('');
   //document.getElementById('fcount').innerHTML = '' + count;
   //document.getElementById('me').innerHTML = viewer.getDisplayName();
-  gadgets.window.adjustHeight();
+  //gadgets.window.adjustHeight();
 }
 
 function init() {
-  var app = getSWF('FlexJSTutorial');
+  var app = getSWF('EISample');
   if (!app) output('app missing');
   else app.addPerson('loading ...', '23', 'bb');
   loadFriends();
