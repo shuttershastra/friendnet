@@ -9,9 +9,20 @@
       <script>
         gadgets.util.registerOnLoadHandler(init);
       </script>
+      <script>
+      	function test() {
+        	alert('aa');
+        	var app = getSWF('EISample');
+		  	if (!app) output('app missing');
+		  	else {
+		    	app.add_friends('loading ...');
+		  	} 
+		}
+	  </script>
       <div id='main'>
       <div id='app'>
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 			id="EISample" width="482" height="348"
 			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
 			<param name="movie" value="http://megaswf.com/upload_files/5c1eef220a4ce10dae722e361e8b73fb.swf" />
@@ -28,12 +39,10 @@
 				pluginspage="http://www.adobe.com/go/getflashplayer">
 			</embed>
 	</object>
-    </div>
-   <form id='gift_form'>
-            Add friends to above display list: <a href='javascript:void(0);' onclick='loadFriends();'>Go!</a>
+  <div>
+  <form id='gift_form'>
+            Add friends to above display list: <a href='javascript:void(0);' onclick='test();'>Go!</a>
     </form>
-
-
         Your friends:
         <div id='friends'></div>
       </div>

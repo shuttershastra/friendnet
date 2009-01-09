@@ -43,7 +43,7 @@ function onLoadFriends(data) {
 }
 
 function init() {
-  
+   loadFriends();
 }
 
 function swf_ready() {
@@ -53,6 +53,5 @@ function swf_ready() {
   if (!app) output('app missing');
   else {
     app.add_friends('loading ...');
-  }
-  loadFriends();
+  } 
 }
