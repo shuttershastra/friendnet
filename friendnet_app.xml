@@ -10,6 +10,17 @@
         gadgets.util.registerOnLoadHandler(init);
       </script>
       <script>
+      
+function swf_ready() {
+  alert('SWF ready');
+  output('SWF ready');
+  var app = getSWF('EISample');
+  if (!app) output('app missing');
+  else {
+    app.add_friends('loading ...');
+  } 
+}
+      
       	function test() {
         	alert('aa');
         	var app = getSWF('EISample');

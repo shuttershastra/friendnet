@@ -45,13 +45,3 @@ function onLoadFriends(data) {
 function init() {
    loadFriends();
 }
-
-function swf_ready() {
-  alert('SWF ready');
-  output('SWF ready');
-  var app = getSWF('EISample');
-  if (!app) output('app missing');
-  else {
-    app.add_friends('loading ...');
-  } 
-}
