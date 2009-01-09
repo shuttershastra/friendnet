@@ -13,8 +13,6 @@
       
 function swf_ready() {
   alert('SWF ready');
-
-  } 
 }
       
       	function test() {
