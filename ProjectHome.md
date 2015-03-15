@@ -1,0 +1,1 @@
+view all friends. sample orkut application.
